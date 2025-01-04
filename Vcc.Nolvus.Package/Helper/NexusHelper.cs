@@ -7,15 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Vcc.Nolvus.Core.Services;
 
-namespace Vcc.Nolvus.Package.Mods
+namespace Vcc.Nolvus.Package.Helper
 {
     public static class NexusHelper
     {
-        private static string session_cookie = "your_session_cookie_here";
+        private static string session_cookie = "fwroute=1735909542.332.410.251510|b295758090068ae543818c1ba2aeea3e; nexusmods_session=16bf9b4ebb6f96532d85d98fe8e973e0; nexusmods_session_refresh=1735987515; cf_clearance=P0wP64cuQAcz29JgInt7ePoithWAHh2mXDtHKWaiaUw-1735991697-1.2.1.1-O835YGVfqh7r__Yo6DYrT1zZppxFY97bF59pHQiW7fEPB344xPQj5xCrBYOdFBGEz5R.MkIHmI4VOmoX7fow8dLoUoNEC39QQ7MlGX7gV6x0yvOi3ZL6rHcTW9JUBfQElcQLrYmy.lRcKqswVNXs0spAcFf4h8nV38hc7H9rerdZ0ofzDIhfCynbXPnDTR0UFdZyTt9rGQ3jrbm9KhKoCc9T1vhYKWs7Mkh2mGeRhHGEeW4ia326Z9iSO.G.4hpzJewjn_LypNBsXf5RYgnruURhYjwSycJdZnHNCssQ5o0B6jfposYcvM99wx.XGWiy7jRSoqzW9ypFGJMAVKIWUc9vD1W0_tXuDy1kGImjYB_2h_hUhMBimOBoId.zzy20";
         private static string skyrim_game_id = "1704";
         private static string nexus_download_url = "https://www.nexusmods.com/Core/Libs/Common/Managers/Downloads?GenerateDownloadUrl";
         
-        public static Task<string> MakePostRequest(string refererUrl, string fileId)
+        public static async Task<string> MakePostRequest(string refererUrl, string fileId)
         {
             string downloadUrl = null;
             HttpClientHandler handler = new HttpClientHandler()
