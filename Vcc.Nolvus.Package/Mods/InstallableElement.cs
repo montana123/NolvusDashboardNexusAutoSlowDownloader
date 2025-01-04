@@ -1,9 +1,7 @@
 using System;
 using System.Linq;
 using System.Xml;
-using System.Drawing;
 using System.IO;
-using System.Net;
 using System.Threading;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -12,8 +10,7 @@ using Vcc.Nolvus.Core.Events;
 using Vcc.Nolvus.Core.Services;
 using Vcc.Nolvus.Core.Interfaces;
 using Vcc.Nolvus.Package.Files;
-using Vcc.Nolvus.NexusApi;
-
+using Vcc.Nolvus.Package.Helper;
 
 namespace Vcc.Nolvus.Package.Mods
 {
